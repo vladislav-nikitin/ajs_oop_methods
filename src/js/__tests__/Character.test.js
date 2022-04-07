@@ -31,6 +31,8 @@ test("error if this.type is not valid", () => {
 test("levelUp", () => {
   const zombie = new Character("Ivan", "Zombie");
   zombie.health = 40;
+  zombie.attack = 40;
+  zombie.defence = 10;
   zombie.levelUp();
   expect(zombie).toEqual({
     name: "Ivan",
@@ -50,6 +52,8 @@ test("error if health = 0", () => {
 
 test("damage(points)", () => {
   const zombie = new Character("Ivan", "Zombie");
+  zombie.attack = 40;
+  zombie.defence = 10;
   zombie.damage(10);
   expect(zombie.health).toBe(91);
 });
