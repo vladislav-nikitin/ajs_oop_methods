@@ -1,11 +1,11 @@
-import Bowerman from "../Bowerman";
+import Bowman from "../Bowman";
 
 test("initial class", () => {
-  const received = new Bowerman("Ivan", "Bowerman");
+  const received = new Bowman("Ivan", "Bowman");
 
   expect(received).toEqual({
     name: "Ivan",
-    type: "Bowerman",
+    type: "Bowman",
     health: 100,
     level: 1,
     attack: 25,

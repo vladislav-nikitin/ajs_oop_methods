@@ -1,4 +1,5 @@
 import Character from "../Character";
+import Zombie from "../Zombie";
 
 test("initial class", () => {
   expect(new Character("Ivan", "Zombie")).toEqual({
@@ -6,21 +7,21 @@ test("initial class", () => {
     type: "Zombie",
     health: 100,
     level: 1,
-    attack: 10,
-    defence: 10,
+    attack: undefined,
+    defence: undefined,
   });
 });
 
 test("error if typeof this.name !== string", () => {
-  expect(() => new Character(123, "Bowerman")).toThrow();
+  expect(() => new Character(123, "Bowman")).toThrow();
 });
 
 test("error if this.name.length < 2", () => {
-  expect(() => new Character("I", "Bowerman")).toThrow();
+  expect(() => new Character("I", "Bowman")).toThrow();
 });
 
 test("error if this.name.length > 10", () => {
-  expect(() => new Character("Ivanivanivanivan", "Bowerman")).toThrow();
+  expect(() => new Character("Ivanivanivanivan", "Bowman")).toThrow();
 });
 
 test("error if this.type is not valid", () => {
@@ -36,7 +37,7 @@ test("levelUp", () => {
     type: "Zombie",
     health: 100,
     level: 2,
-    attack: 12,
+    attack: 48,
     defence: 12,
   });
 });
